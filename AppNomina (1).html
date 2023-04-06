@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadatos -->
+        <meta charset="utf-8">
+        <meta name="author" content="DevAndrwGx">
+        <meta name="description" content="Nomina Project">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width" , initial-scale="1">
+        <!-- Titulo -->
+        <title>Liquidar Nomina | empleados</title>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/usuarios-alt.png" type="image/x-icon">
+        <!-- Bootstrap -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
+         <link rel="stylesheet" href="CSS/frontNomina.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    </head>
+    <body>
+        
+        <h1 class="title">Liquidar Nomina</h1>
+        <div class="container">
+            <form action="" method="post">
+                <div class="container text-center">
+                    <p>Hola Bienvenido a la nomina...</p>
+                </div>
+                    <label for="amaout">Cantidad Empelados:</label>
+                    <input type="text" id="amaout" placeholder="Cantidad Empledos"><br><br>
+            
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" placeholder="Nombre"><br><br>
+            
+                    <label for="last-name">Apelldio:</label>
+                    <input type="text" id="last-name" placeholder="Apelldio"><br><br>
+            
+                    <label for="id">Cedula: </label>
+                    <input type="text" id="id" placeholder="Cedula"><br><br>
+            
+                    <label for="salary">Sueldo pactado: </label>
+                    <input type="text" id="salary" placeholder="Sueldo"><br><br>
+            
+                    <label for="day">Dias laborados: </label>
+                    <input type="text" id="day" placeholder="Dias laborados"><br><br>
+                    <label for="hoursX">Horas Extras: </label>
+                    <br>
+                    <br>
+                    <label for="yes">SI</label>
+                    <input type="radio" id="yes" name="opciones" value="SI">
+                    <label for="no">NO</label>
+                    <input type="radio" id="no" name="opciones" value="NO">
+                    <br>
+                    <br>
+                    <!-- <div id="container"></div> -->
+                    <br>
+                    <div id="container-inputs-labels">
+                        <label for=""><strong>Tipo Horas</strong>: </label><br><br>
+                        <label for="nocturnas">Nocturnas</label>
+                        <input type="radio" name="opcionesHoras" id="nocturnas" value="nocturnas"><br>
+                        <label for="diurnas">Diurnas</label>
+                        <input type="radio" name="opcionesHoras" id="diurnas" value="diurnas"><br>
+                        <label for="ambas">Ambas</label>
+                        <input type="radio" name="opcionesHoras" id="ambas" value="ambas"><br>
+
+                    </div>
+                    <br>
+                    <div id="container-inputs-horas">
+                        <div id="con-hor-diurnas">
+
+                            <label for="diurnasH">Cantidad de horas Diurnas:<label>
+                            <input type="text" name="diurnasH" id="diurnasH" placeholder="Diurnas">
+                        </div>
+                        <div id="con-hor-nocturnas">
+
+                            <label for="nocturnasH">Cantidad de horas Nocturnas:</label>
+                            <input type="text" name="nocturnasH" id="nocturnasH" placeholder="Nocturnas">
+                        </div>
+                        <div id="con-hor-ambas">
+
+                            <label for="ambasH">Cantidad de horas Nocturnas:</label>
+                            <input type="text" name="ambasH" id="nocturnasHDia" placeholder="Ambas"><br><br>
+
+                            <label for="diurnasH">Cantidad de horas Diurnas:<label>
+                            <input type="text" name="diurnasH" id="diurnasHDia" placeholder="Diurnas">
+                        </div>
+                    </div>
+                    <br>
+            
+                    <div id="container-deducciones">
+                        <label for="Sindicato">Sindicato:</label>
+                        <br>
+                        <br>
+                        <label for="siSindicato">SI</label>
+                        <input type="radio" name="Sindicato" id="siSindicato" value="siSindicato">
+                        <label for="noSindicato">NO</label>
+                        <input type="radio" name="Sindicato" id="noSindicato" value="noSindicato">
+                        <br>
+                        <br>
+                        <label for="Pension">Pension:</label>
+                        <br>
+                        <br>
+                        <label for="siPension">SI</label>
+                        <input type="radio" name="pension" id="siPension" value="siPension">
+                        <label for="noPension">NO</label>
+                        <input type="radio" name="pension" id="noPension" value="noPension">
+                        <br>
+                        <br>
+                        <label for="salud">Salud:</label>
+                        <br>
+                        <br>
+                        <label for="siSalud">SI</label>
+                        <input type="radio" name="salud" id="siSalud" value="siSalud">
+                        <label for="noSalud">NO</label>
+                        <input type="radio" name="salud" id="noSalud" value="noSalud">
+                    </div>
+                    <br>
+                    <br>
+
+                    <!-- container para si selecciona la opciones de avanceSueldo, juzgado, lilbranza; -->
+                    <div id="container-AJL">
+                        
+                    </div>
+                    <!-- container para avance sueldo
+                                juzgado y libranza 
+                                -->
+                    <div id="container-deduccione++">
+            
+                        <label for="avance">Avance Sueldo: </label>
+                        <br>
+                        <br>
+                        <label for="siAvance-sueldo">SI</label>
+                        <input type="radio" name="avance" id="siAvance-sueldo" value="siAvance-sueldo">
+                        <label for="noAvance-sueldo">NO</label>
+                        <input type="radio" name="avance" id="noAvance-sueldo" value="noAvance-sueldo">
+                        
+                        <div id="avanceSueldoCampo">
+                            <label for="avance-sueldo">Ingrese Avance Sueldo:</label>
+                            <input type="text" id="avance-sueldo" placeholder="Cantidad sueldo">
+                        </div>
+                        <br>
+                        <br>
+                        
+            
+                        <br>
+            
+                        <label for="juzgado">Juzgado:</label>
+                        <br>
+                        <br>
+                        <label for="siJuzgado">SI</label>
+                        <input type="radio" id="siJuzgado" name="juzgado" value="siJuzgado">
+                        <label for="noJuzgado">No</label>
+                        <input type="radio" id="noJuzgado" name="juzgado" value="noJuzgado">
+
+                        <div id="juzgadoCampo">
+                            <label for="Cuota-juzgado">Ingrese Cuota Juzgado:</label>
+                            <input type="text" id="Cuota-juzgado" placeholder="Cantidad juzgado">
+                        </div>
+
+                        <br>
+                        <br>
+                       
+            
+                        <br>
+                        <label for="libranza">Libranza:</label>
+                        <br>
+                        <br>
+                        <label for="siLibranza">SI</label>
+                        <input type="radio" name="libranza" id="siLibranza" value="siLibranza">
+                        <label for="noLibranza">NO</label>
+                        <input type="radio" name="libranza" id="noLibranza" value="noLibranza">
+
+                        <div id="libranzaCampo">
+                            <label for="Cuota-libranza">Ingrese Cuota Libranza:</label>
+                            <input type="text" id="Cuota-libranza" placeholder="Cantidad libranza">
+                        </div>
+
+                        <br>
+                        <br>
+                    </div>
+
+                    <!-- Container para avance sueldo juzgado, libranza y avance sueldo -->
+                
+
+                    <input type="button" class="btn btn-outline-success" id="send" value="Calcular">
+                    <input class="btn btn-outline-danger" type="reset" id="remove" value="Borrar">
+                    <br>
+                    <br>
+            </form>
+            
+            <table border="1" id="myTable" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Apellidos </th>
+                        <th> Identificacion </th>
+                        <th> Salario Base </th>
+                        <th> Dias Laborados </th>
+                        <th> Horas extras </th>
+                        <th> Tipo horas </th>
+                        <th id="yyy"> Cantidad horas extras <br>nocturnas</th>
+                        <th id="xxx"> Cantidad horas extras <br>diurnas</th>
+                        <th>Valor Dia</th>
+                        <th>Sueldo Hora</th>
+                        <th>Auxilio de transporte</th>
+                        <th id="zzz">Pago horas <br> Extras Diurnas</th>
+                        <th id="aaa">Pago horas <br> Extras Nocturnas</th>
+                        <th>Sueldo Total <br> Devengado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="td1"></td>
+                        <td id="td2"></td>
+                        <td id="td3"></td>
+                        <td id="td4"></td>
+                        <td id="td5"></td>
+                        <td id="td6"></td>
+                        <td id="td7"></td>
+                        <td id="td8"></td>
+                        <td id="td9"></td>
+                        <td id="td10"></td>
+                        <td id="td11"></td>
+                        <td id="td12"></td>
+                        <td id="td13"></td>
+                        <td id="td14"></td>
+                        <td id="td15"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <table border="1px" class="table table-bordered">
+                <thead>
+                    <th>Salud</th>
+                    <th>Pension</th>
+                    <th>Sindicato</th>
+                    <th>Avance sueldo</th>
+                    <th>Juzgado</th>
+                    <th>libranza</th>
+                    <th>Deducciones</th>
+                    <th>Sueldo neto pagado</th>
+                </thead>
+            
+                </tbody>
+                <thead>
+                    <td id="td16"></td>
+                    <td id="td17"></td>
+                    <td id="td18"></td>
+                    <td id="td19"></td>
+                    <td id="td20"></td>
+                    <td id="td21"></td>
+                    <td id="td22"></td>
+                    <td id="td23"></td>
+                </thead>
+            </table>
+            
+            
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script src="Scripts/nomina.js"></script>
+    </body>
+    <br>
+    <div class="container text-center">
+        <footer>
+            © DevAndreyGx (Andrey Gomez)
+        </footer>
+    </div>
+    
+</html>
