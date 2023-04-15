@@ -413,6 +413,7 @@ function decidirBotones(grupoNombre) {
 
                 td7.innerHTML = "Diurnas & Nocturnas";
                 y.style.display = "block";
+                td8.style.display = "block";
                 td8.textContent = 0;
 
                 x.style.display = "block";
@@ -425,6 +426,10 @@ function decidirBotones(grupoNombre) {
                 newContainerDeucciones.style.display = 'block';
 
                 containerAmbas.style.display = "block";
+
+
+                containerNoche.style.display = "none";
+                containerDia.style.display = "none";
 
                
 
@@ -520,18 +525,20 @@ function decidir() {
         td13.style.display = "block";
         td13.textContent = 0;
 
+        
         a.style.display = "block";
         td14.style.display = "block";
-        td14.textContent = 0;
-        td13.textContent = (horass) * getDiurnas.value;
-        td14.textContent = (horasx) * getNocturnas.value;
+        td14.textContent = 0
+
+        td13.textContent = Math.round((horass) * getDiurnasAmbas.value);
+        td14.textContent = Math.round(horasx) * getNocturnasAmbas.value;
 
 
         
 
 
-        td9.textContent = getNocturnasAmbas.value;
-        td8.textContent = getDiurnasAmbas.value;
+        // td9.textContent = getNocturnasAmbas.value;
+        // td8.textContent = getDiurnasAmbas.value;
 
 
 
@@ -539,8 +546,8 @@ function decidir() {
 
       
 
-        console.log(getNocturnas.value);
-        console.log(getDiurnas.value);
+        console.log(getNocturnasAmbas.value);
+        console.log(getDiurnasAmbas.value);
 
         y.style.display = 'block';
 
@@ -613,6 +620,7 @@ function deducciones() {
 
     }else {
         td19.textContent = 0;
+        avanceSueldoX.value = 0;
     }
 
     if(checkJuzgado.checked) {
@@ -620,13 +628,15 @@ function deducciones() {
         td20.textContent = cuotaJuzgadoX.value;
     }else {
         td20.textContent = 0;
+        cuotaJuzgadoX.value = 0;
     }
 
     if(checkLibranza.checked) {
         alert("Entra aqui Libranza");
         td21.textContent = cuotaLibranzaX.value;
     }else {
-        td21.textContent = 0; 
+        td21.textContent = 0;
+        cuotaLibranzaX.value = 0; 
     }
 
 
@@ -637,6 +647,10 @@ function deducciones() {
 
     td22.textContent = totalDedunciones;
     td23.textContent = totSuelConDeduc;
+
+
+    console.log(totalDedunciones);
+    console.log(totSuelConDeduc);
 
 
 }
@@ -672,6 +686,13 @@ enviarForm.addEventListener('click', () => {
         alert("NOOOOOOOOO")
     }
 
+    if (seleccion === "ambas") {
+        console.log("Entra aqui xxxx");
+
+        td9.textContent = getNocturnasAmbas.value;
+        td8.textContent = getDiurnasAmbas.value;
+    }
+
     // Apeart data Avance Sueldo,Juzgado, Libranza...
 
 
@@ -679,6 +700,8 @@ enviarForm.addEventListener('click', () => {
 
 reiniciarDatos.addEventListener('click', () => {
     location.reload(); 
+
+    
 })
 
 decidirBotones("libranza");
